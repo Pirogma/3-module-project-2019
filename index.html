@@ -3,8 +3,72 @@
   <head>
     <meta charset="utf-8">
     <title>Animated poster</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+   <script src="jquery.js" charset="utf-8"></script>
+   <script type="text/javascript">
+
+        $(function() {
+          $(".bottom").each(function(index) {
+            let r = Math.floor(Math.random() * 0)
+            let g = Math.floor(Math.random() * 0)
+            let b = Math.floor(Math.random() * 0)
+            let color = [r, g, b].join()
+            $(this).css({
+              "color": "rgb(" + color + ")"
+            })
+            $(this).on("mouseenter", function() {
+              let width  = Math.round(Math.random() * 0) + 600
+              let height  = Math.round(Math.random() * 0)
+              $(this).css({
+                "height":  height + "px",
+                "width":  width + "px"
+              })
+            })
+          })
+        })
+
+        $(function() {
+          $(".left").each(function(index) {
+            let r = Math.floor(Math.random() * 0)
+            let g = Math.floor(Math.random() * 0)
+            let b = Math.floor(Math.random() * 0)
+            let color = [r, g, b].join()
+            $(this).css({
+              "color": "rgb(" + color + ")"
+            })
+            $(this).on("mouseenter", function() {
+              let width  = Math.round(Math.random() * 0)
+              let height  = Math.round(Math.random() * 0) + 200
+              $(this).css({
+                "height":  height + "px",
+                "width":  width + "px"
+              })
+            })
+          })
+        })
+
+      </script>
+
   </head>
   <body>
 
+<div class="top">
+  <div class="button music1"><a href="#"><img src="images/paper.jpg" alt="cat"></a></div>
+         <audio id="sound-link" preload="auto">
+            <source src="audio/mew.mp3" type="audio/mpeg">
+         </audio>
+</div>
+<div class="bottom"></div>
+<div class="left"></div>
+<div class="right"></div>
+
+
+
+       <script>
+var soundLink = $("#sound-link")[0];
+        $(".music1 a").click(function() {
+            soundLink.play();
+        });
+</script>
   </body>
 </html>
