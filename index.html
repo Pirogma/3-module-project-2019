@@ -8,37 +8,37 @@
    <script type="text/javascript">
 
      $(function() {
-      $(".bottom").animate({
-      height: '0'}, {duration: 1200, specialEasing: {height: 'linear'}
+      $(".bottom").delay(1000).animate({
+      height: '0'}, {duration: 600, specialEasing: {height: 'linear'}
                       });
                   });
 
 
     $(function() {
-      $(".right").animate({
-      width: '0'}, {duration: 1200, specialEasing: {width: 'linear'}
+      $(".right").delay(1700).animate({
+      width: '0'}, {duration: 600, specialEasing: {width: 'linear'}
                       });
                   });
 
     $(function() {
-      $(".left").animate({
-      width: '0', height:"+310", left:"+=300"}, {duration: 1200, specialEasing: {width: 'swing'}
+      $(".left").delay(1700).animate({
+      width: '0', height:"+300", left:"+=300"}, {duration: 600, specialEasing: {width: 'linear'}
                       });
                   });
 
     $(function() {
-      $(".top").animate({
-      width: "0", top:"0", left:"+=150"}, {duration: 1200, specialEasing: {width: 'swing'}
+      $(".top").delay(2500).animate({
+      width: "0", top:"0", left:"+=150"}, {duration: 600, specialEasing: {width: 'linear'}
                       });
                   });
 
 
       $(function() {
-        $(".second-left, .second-right").fadeTo(0, 1)
+        $(".second-left, .second-right").delay(2400).fadeTo(0, 1)
 })
 
         $(function() {
-          $(".cat").fadeTo(0, 1)
+          $(".cat").delay(3800).fadeTo(0, 1)
 })
 
       </script>
