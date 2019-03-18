@@ -10,10 +10,13 @@ html, body {
   background-color: black;
 }
 
-div {
-  position: absolute;
+.origami div {
   background: rgb(225,227,201);
   background: linear-gradient(90deg, rgba(225,227,201,1) 25%, rgba(255,252,240,1) 62%, rgba(255,254,236,1) 100%);
+}
+
+div {
+  position: absolute;
   width: 600px;
   height: 600px;
   overflow: hidden;
@@ -64,6 +67,15 @@ div {
   left: 150px;
   z-index: 1;
 }
+
+  img {
+  position: absolute;
+  z-index: 1;
+  left: 550px;
+  top: 60px;
+  width: 300px;
+}
+
 .left + .right p {
   transform: rotate(180deg);
 }
