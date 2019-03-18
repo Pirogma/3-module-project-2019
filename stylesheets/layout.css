@@ -7,7 +7,7 @@ html, body {
   height: 100%;
   margin: 0;
   overflow: hidden;
-  background-color: black;
+  background-color: #00A7E1;
 }
 
 .origami div {
@@ -57,6 +57,7 @@ div {
   width: 150px;
   height: 150px;
   left: 320px;
+  opacity: 0;
 }
 
 .center {
@@ -74,6 +75,7 @@ div {
   left: 550px;
   top: 60px;
   width: 300px;
+  opacity: 0;
 }
 
 .left + .right p {
@@ -93,12 +95,14 @@ div {
   width: 150px;
   height: 150px;
   left: 130px;
+  opacity: 0;
 }
 
 p {
-  color: blue;
+  color: gray;
 font-size: 24px;
-font-family: 'Caveat', cursive;
+font-family: 'Code Pro', sans-serif;
+line-height: 30px;
 position: absolute;
 z-index: 3;
 }

@@ -7,93 +7,39 @@
    <script src="jquery.js" charset="utf-8"></script>
    <script type="text/javascript">
 
-        $(function() {
-          $(".bottom").each(function(index) {
-            let r = Math.floor(Math.random() * 0)
-            let g = Math.floor(Math.random() * 0)
-            let b = Math.floor(Math.random() * 0)
-            let color = [r, g, b].join()
-            $(this).css({
-              "color": "rgb(" + color + ")"
-            })
-            $(this).on("mouseenter", function() {
-              let width  = Math.round(Math.random() * 0) + 600
-              let height  = Math.round(Math.random() * 0)
-              $(this).css({
-                "height":  height + "px",
-                "width":  width + "px"
-              })
-            })
-          })
-        })
+     $(function() {
+      $(".bottom").animate({
+      height: '0'}, {duration: 1200, specialEasing: {height: 'linear'}
+                      });
+                  });
 
 
-        $(function() {
-          $(".right").each(function(index) {
-            let r = Math.floor(Math.random() * 0)
-            let g = Math.floor(Math.random() * 0)
-            let b = Math.floor(Math.random() * 0)
-            let color = [r, g, b].join()
-            $(this).css({
-              "color": "rgb(" + color + ")"
-            })
-            $(this).on("mouseenter", function() {
-              let width  = Math.round(Math.random() * 0)
-              let height  = Math.round(Math.random() * 0) + 200
-              $(this).css({
-                "height":  height + "px",
-                "width":  width + "px"
-              })
-            })
-          })
-        })
+    $(function() {
+      $(".right").animate({
+      width: '0'}, {duration: 1200, specialEasing: {width: 'linear'}
+                      });
+                  });
 
+    $(function() {
+      $(".left").animate({
+      width: '0', height:"+310", left:"+=300"}, {duration: 1200, specialEasing: {width: 'swing'}
+                      });
+                  });
+
+    $(function() {
+      $(".top").animate({
+      width: "0", top:"0", left:"+=150"}, {duration: 1200, specialEasing: {width: 'swing'}
+                      });
+                  });
+
+
+      $(function() {
+        $(".second-left, .second-right").fadeTo(0, 1)
+})
 
         $(function() {
-          $(".left").each(function(index) {
-            let r = Math.floor(Math.random() * 0)
-            let g = Math.floor(Math.random() * 0)
-            let b = Math.floor(Math.random() * 0)
-            let color = [r, g, b].join()
-            $(this).css({
-              "color": "rgb(" + color + ")"
-            })
-            $(this).on("mouseenter", function() {
-              let width  = Math.round(Math.random() * 0)
-              let height  = Math.round(Math.random() * 0) + 200
-              let left  = Math.round(Math.random() * 0) + 225
-              $(this).css({
-                "left":  left + "px",
-                "height":  height + "px",
-                "width":  width + "px"
-              })
-            })
-          })
-        })
-
-        $(function() {
-          $(".top").each(function(index) {
-            let r = Math.floor(Math.random() * 0)
-            let g = Math.floor(Math.random() * 0)
-            let b = Math.floor(Math.random() * 0)
-            let color = [r, g, b].join()
-            $(this).css({
-              "color": "rgb(" + color + ")"
-            })
-            $(this).on("mouseenter", function() {
-              let top  = Math.round(Math.random() * 0) + 10
-              let width  = Math.round(Math.random() * 0) + 110
-              let left  = Math.round(Math.random() * 0) + 245
-              $(this).css({
-                "top":  top + "px",
-                "left": left + "px",
-                "width": width + "px"
-              })
-            })
-          })
-        })
-
-
+          $(".cat").fadeTo(0, 1)
+})
 
       </script>
 
@@ -127,12 +73,10 @@
     <div class="second-right"></div>
     </section>
 
-    <a href="#"><img src="images/cat.png" alt="cat"></a>
+    <a href="#"><img class="cat" src="images/cat.png" alt="cat"></a>
            <audio id="sound-link" preload="auto">
               <source src="audio/mew.mp3" type="audio/mpeg">
            </audio>
-
-
 
        <script>
 var soundLink = $("#sound-link")[0];
