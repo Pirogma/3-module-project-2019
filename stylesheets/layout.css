@@ -1,5 +1,5 @@
 * {
-  transition: 0.9s;
+  transition: 0.6s;
 }
 
 html, body {
@@ -11,33 +11,61 @@ html, body {
 }
 
 div {
+  position: absolute;
   background: rgb(225,227,201);
   background: linear-gradient(90deg, rgba(225,227,201,1) 25%, rgba(255,252,240,1) 62%, rgba(255,254,236,1) 100%);
   width: 600px;
   height: 600px;
   overflow: hidden;
   clip-path: polygon(100% 0, 50% 50%, 0 0);
-margin-left: 300px;
+  margin-left: 400px;
 }
 
 .top {
-  margin-top: -200px;
+
   transform: rotate(180deg);
+  width: 300px;
+  height: 290px;
+  left: 150px;
+  top: -140px;
+
+  z-index: 1;
 }
+
 .top p {
   transform: rotate(180deg);
+
+}
+
+.bottom {
+    top: 300px;
 }
 
 .left {
-
   clip-path: polygon(80% 0, 50% 50%, 0 0);
   transform: rotate(180deg);
   transform: scale(1, -1);
   width: 300px;
   height: 300px;
-  margin-top: -900px;
-  margin-left: 300px;
-  transition: 0.1s;
+}
+
+.second-left {
+  clip-path: polygon(50% 0%, 15% 100%, 85% 100%);
+  width: 150px;
+  height: 150px;
+  left: 320px;
+}
+
+.center {
+  clip-path: polygon(0 50%, 100% 50%, 70% 100%, 30% 100%);
+
+  width: 300px;
+  height: 300px;
+  left: 150px;
+  z-index: 1;
+}
+.left + .right p {
+  transform: rotate(180deg);
 }
 
 .right {
@@ -45,14 +73,20 @@ margin-left: 300px;
   transform: rotate(180deg);
   width: 300px;
   height: 300px;
-  margin-top: -900px
-  margin-left: 600px;
+  margin-left: 700px;
+}
+
+.second-right {
+  clip-path: polygon(50% 0%, 15% 100%, 85% 100%);
+  width: 150px;
+  height: 150px;
+  left: 130px;
 }
 
 p {
   color: blue;
 font-size: 24px;
 font-family: 'Caveat', cursive;
-}
-.bottom {
+position: absolute;
+z-index: 3;
 }
