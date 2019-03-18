@@ -7,6 +7,20 @@
    <script src="jquery.js" charset="utf-8"></script>
    <script type="text/javascript">
 
+
+   $(function() {
+       $("body").each(function(index) {
+         let r = Math.floor(Math.random() * 1000)
+         let g = Math.floor(Math.random() * 1000)
+         let b = Math.floor(Math.random() * 1000)
+         let color = [r, g, b].join()
+         $(this).css({
+           "background-color": "rgb(" + color + ")"
+         })
+       })
+     })
+
+
      $(function() {
       $(".bottom").delay(1000).animate({
       height: '0'}, {duration: 600, specialEasing: {height: 'linear'}
